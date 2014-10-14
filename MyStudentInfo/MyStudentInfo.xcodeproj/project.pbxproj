@@ -22,6 +22,7 @@
 		A9DB90A519ECC6BA00127DF6 /* SAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DB909E19ECC6BA00127DF6 /* SAViewController.m */; };
 		A9DB90A619ECC6BA00127DF6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DB90A219ECC6BA00127DF6 /* Main_iPad.storyboard */; };
 		A9DB90A719ECC6BA00127DF6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DB90A319ECC6BA00127DF6 /* Main_iPhone.storyboard */; };
+		A9DB90AB19ECCA6700127DF6 /* SALoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DB90AA19ECCA6700127DF6 /* SALoginVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		A9DB909E19ECC6BA00127DF6 /* SAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAViewController.m; sourceTree = "<group>"; };
 		A9DB90A219ECC6BA00127DF6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		A9DB90A319ECC6BA00127DF6 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
+		A9DB90A919ECCA6700127DF6 /* SALoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SALoginVC.h; sourceTree = "<group>"; };
+		A9DB90AA19ECCA6700127DF6 /* SALoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SALoginVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,7 @@
 		A9DB909B19ECC6BA00127DF6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A9DB90A819ECCA5100127DF6 /* LoginVC */,
 				A9DB909C19ECC6BA00127DF6 /* SplashScreenVc */,
 			);
 			path = ViewControllers;
@@ -209,6 +213,15 @@
 				A9DB90A319ECC6BA00127DF6 /* Main_iPhone.storyboard */,
 			);
 			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		A9DB90A819ECCA5100127DF6 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				A9DB90A919ECCA6700127DF6 /* SALoginVC.h */,
+				A9DB90AA19ECCA6700127DF6 /* SALoginVC.m */,
+			);
+			path = LoginVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9DB90AB19ECCA6700127DF6 /* SALoginVC.m in Sources */,
 				A9DB90A419ECC6BA00127DF6 /* SAAppDelegate.m in Sources */,
 				A9DB90A519ECC6BA00127DF6 /* SAViewController.m in Sources */,
 				A9DB906C19ECC5BA00127DF6 /* main.m in Sources */,
