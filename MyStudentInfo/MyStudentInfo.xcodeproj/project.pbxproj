@@ -12,16 +12,16 @@
 		A9DB906419ECC5BA00127DF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DB906319ECC5BA00127DF6 /* UIKit.framework */; };
 		A9DB906A19ECC5BA00127DF6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9DB906819ECC5BA00127DF6 /* InfoPlist.strings */; };
 		A9DB906C19ECC5BA00127DF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DB906B19ECC5BA00127DF6 /* main.m */; };
-		A9DB907019ECC5BA00127DF6 /* SAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DB906F19ECC5BA00127DF6 /* SAAppDelegate.m */; };
-		A9DB907319ECC5BA00127DF6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DB907119ECC5BA00127DF6 /* Main_iPhone.storyboard */; };
-		A9DB907619ECC5BA00127DF6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DB907419ECC5BA00127DF6 /* Main_iPad.storyboard */; };
-		A9DB907919ECC5BA00127DF6 /* SAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DB907819ECC5BA00127DF6 /* SAViewController.m */; };
 		A9DB907B19ECC5BA00127DF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9DB907A19ECC5BA00127DF6 /* Images.xcassets */; };
 		A9DB908219ECC5BA00127DF6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DB908119ECC5BA00127DF6 /* XCTest.framework */; };
 		A9DB908319ECC5BA00127DF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DB905F19ECC5BA00127DF6 /* Foundation.framework */; };
 		A9DB908419ECC5BA00127DF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DB906319ECC5BA00127DF6 /* UIKit.framework */; };
 		A9DB908C19ECC5BA00127DF6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9DB908A19ECC5BA00127DF6 /* InfoPlist.strings */; };
 		A9DB908E19ECC5BA00127DF6 /* MyStudentInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DB908D19ECC5BA00127DF6 /* MyStudentInfoTests.m */; };
+		A9DB90A419ECC6BA00127DF6 /* SAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DB909A19ECC6BA00127DF6 /* SAAppDelegate.m */; };
+		A9DB90A519ECC6BA00127DF6 /* SAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DB909E19ECC6BA00127DF6 /* SAViewController.m */; };
+		A9DB90A619ECC6BA00127DF6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DB90A219ECC6BA00127DF6 /* Main_iPad.storyboard */; };
+		A9DB90A719ECC6BA00127DF6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9DB90A319ECC6BA00127DF6 /* Main_iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,18 +43,18 @@
 		A9DB906919ECC5BA00127DF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A9DB906B19ECC5BA00127DF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A9DB906D19ECC5BA00127DF6 /* MyStudentInfo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyStudentInfo-Prefix.pch"; sourceTree = "<group>"; };
-		A9DB906E19ECC5BA00127DF6 /* SAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAAppDelegate.h; sourceTree = "<group>"; };
-		A9DB906F19ECC5BA00127DF6 /* SAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAAppDelegate.m; sourceTree = "<group>"; };
-		A9DB907219ECC5BA00127DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		A9DB907519ECC5BA00127DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		A9DB907719ECC5BA00127DF6 /* SAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAViewController.h; sourceTree = "<group>"; };
-		A9DB907819ECC5BA00127DF6 /* SAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAViewController.m; sourceTree = "<group>"; };
 		A9DB907A19ECC5BA00127DF6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A9DB908019ECC5BA00127DF6 /* MyStudentInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyStudentInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DB908119ECC5BA00127DF6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A9DB908919ECC5BA00127DF6 /* MyStudentInfoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyStudentInfoTests-Info.plist"; sourceTree = "<group>"; };
 		A9DB908B19ECC5BA00127DF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A9DB908D19ECC5BA00127DF6 /* MyStudentInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyStudentInfoTests.m; sourceTree = "<group>"; };
+		A9DB909919ECC6BA00127DF6 /* SAAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAAppDelegate.h; sourceTree = "<group>"; };
+		A9DB909A19ECC6BA00127DF6 /* SAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAAppDelegate.m; sourceTree = "<group>"; };
+		A9DB909D19ECC6BA00127DF6 /* SAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAViewController.h; sourceTree = "<group>"; };
+		A9DB909E19ECC6BA00127DF6 /* SAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAViewController.m; sourceTree = "<group>"; };
+		A9DB90A219ECC6BA00127DF6 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		A9DB90A319ECC6BA00127DF6 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +114,10 @@
 		A9DB906519ECC5BA00127DF6 /* MyStudentInfo */ = {
 			isa = PBXGroup;
 			children = (
-				A9DB906E19ECC5BA00127DF6 /* SAAppDelegate.h */,
-				A9DB906F19ECC5BA00127DF6 /* SAAppDelegate.m */,
-				A9DB907119ECC5BA00127DF6 /* Main_iPhone.storyboard */,
-				A9DB907419ECC5BA00127DF6 /* Main_iPad.storyboard */,
-				A9DB907719ECC5BA00127DF6 /* SAViewController.h */,
-				A9DB907819ECC5BA00127DF6 /* SAViewController.m */,
+				A9DB909719ECC6BA00127DF6 /* Classes */,
+				A9DB909F19ECC6BA00127DF6 /* Other Classes */,
+				A9DB90A019ECC6BA00127DF6 /* Resources */,
+				A9DB90A119ECC6BA00127DF6 /* StoryBoard */,
 				A9DB907A19ECC5BA00127DF6 /* Images.xcassets */,
 				A9DB906619ECC5BA00127DF6 /* Supporting Files */,
 			);
@@ -153,6 +151,64 @@
 				A9DB908A19ECC5BA00127DF6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9DB909719ECC6BA00127DF6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A9DB909819ECC6BA00127DF6 /* Appdelegate */,
+				A9DB909B19ECC6BA00127DF6 /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A9DB909819ECC6BA00127DF6 /* Appdelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A9DB909919ECC6BA00127DF6 /* SAAppDelegate.h */,
+				A9DB909A19ECC6BA00127DF6 /* SAAppDelegate.m */,
+			);
+			path = Appdelegate;
+			sourceTree = "<group>";
+		};
+		A9DB909B19ECC6BA00127DF6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9DB909C19ECC6BA00127DF6 /* SplashScreenVc */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A9DB909C19ECC6BA00127DF6 /* SplashScreenVc */ = {
+			isa = PBXGroup;
+			children = (
+				A9DB909D19ECC6BA00127DF6 /* SAViewController.h */,
+				A9DB909E19ECC6BA00127DF6 /* SAViewController.m */,
+			);
+			path = SplashScreenVc;
+			sourceTree = "<group>";
+		};
+		A9DB909F19ECC6BA00127DF6 /* Other Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Other Classes";
+			sourceTree = "<group>";
+		};
+		A9DB90A019ECC6BA00127DF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A9DB90A119ECC6BA00127DF6 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				A9DB90A219ECC6BA00127DF6 /* Main_iPad.storyboard */,
+				A9DB90A319ECC6BA00127DF6 /* Main_iPhone.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +288,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9DB907619ECC5BA00127DF6 /* Main_iPad.storyboard in Resources */,
+				A9DB90A719ECC6BA00127DF6 /* Main_iPhone.storyboard in Resources */,
+				A9DB90A619ECC6BA00127DF6 /* Main_iPad.storyboard in Resources */,
 				A9DB907B19ECC5BA00127DF6 /* Images.xcassets in Resources */,
-				A9DB907319ECC5BA00127DF6 /* Main_iPhone.storyboard in Resources */,
 				A9DB906A19ECC5BA00127DF6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,8 +310,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9DB907019ECC5BA00127DF6 /* SAAppDelegate.m in Sources */,
-				A9DB907919ECC5BA00127DF6 /* SAViewController.m in Sources */,
+				A9DB90A419ECC6BA00127DF6 /* SAAppDelegate.m in Sources */,
+				A9DB90A519ECC6BA00127DF6 /* SAViewController.m in Sources */,
 				A9DB906C19ECC5BA00127DF6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,22 +341,6 @@
 				A9DB906919ECC5BA00127DF6 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A9DB907119ECC5BA00127DF6 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9DB907219ECC5BA00127DF6 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		A9DB907419ECC5BA00127DF6 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9DB907519ECC5BA00127DF6 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		A9DB908A19ECC5BA00127DF6 /* InfoPlist.strings */ = {
