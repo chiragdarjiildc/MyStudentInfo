@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9727D4519EE114C00E7B82D /* college.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9727D4419EE114C00E7B82D /* college.jpg */; };
+		A9727D4819EE157300E7B82D /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A9727D4719EE157300E7B82D /* XMLReader.m */; };
+		A9727D4B19EE223900E7B82D /* uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = A9727D4919EE223900E7B82D /* uncheck.png */; };
+		A9727D4C19EE223900E7B82D /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = A9727D4A19EE223900E7B82D /* check.png */; };
 		A9DB906019ECC5BA00127DF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DB905F19ECC5BA00127DF6 /* Foundation.framework */; };
 		A9DB906219ECC5BA00127DF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DB906119ECC5BA00127DF6 /* CoreGraphics.framework */; };
 		A9DB906419ECC5BA00127DF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DB906319ECC5BA00127DF6 /* UIKit.framework */; };
@@ -36,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A9727D4419EE114C00E7B82D /* college.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = college.jpg; sourceTree = "<group>"; };
+		A9727D4619EE157300E7B82D /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLReader.h; path = ../XMLReader.h; sourceTree = "<group>"; };
+		A9727D4719EE157300E7B82D /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLReader.m; path = ../XMLReader.m; sourceTree = "<group>"; };
+		A9727D4919EE223900E7B82D /* uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = uncheck.png; path = ../uncheck.png; sourceTree = "<group>"; };
+		A9727D4A19EE223900E7B82D /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check.png; path = ../check.png; sourceTree = "<group>"; };
 		A9DB905C19ECC5BA00127DF6 /* MyStudentInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStudentInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DB905F19ECC5BA00127DF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A9DB906119ECC5BA00127DF6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -195,6 +204,8 @@
 		A9DB909F19ECC6BA00127DF6 /* Other Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A9727D4619EE157300E7B82D /* XMLReader.h */,
+				A9727D4719EE157300E7B82D /* XMLReader.m */,
 			);
 			path = "Other Classes";
 			sourceTree = "<group>";
@@ -202,6 +213,9 @@
 		A9DB90A019ECC6BA00127DF6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A9727D4919EE223900E7B82D /* uncheck.png */,
+				A9727D4A19EE223900E7B82D /* check.png */,
+				A9727D4419EE114C00E7B82D /* college.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -303,8 +317,11 @@
 			files = (
 				A9DB90A719ECC6BA00127DF6 /* Main_iPhone.storyboard in Resources */,
 				A9DB90A619ECC6BA00127DF6 /* Main_iPad.storyboard in Resources */,
+				A9727D4C19EE223900E7B82D /* check.png in Resources */,
 				A9DB907B19ECC5BA00127DF6 /* Images.xcassets in Resources */,
 				A9DB906A19ECC5BA00127DF6 /* InfoPlist.strings in Resources */,
+				A9727D4519EE114C00E7B82D /* college.jpg in Resources */,
+				A9727D4B19EE223900E7B82D /* uncheck.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +342,7 @@
 			files = (
 				A9DB90AB19ECCA6700127DF6 /* SALoginVC.m in Sources */,
 				A9DB90A419ECC6BA00127DF6 /* SAAppDelegate.m in Sources */,
+				A9727D4819EE157300E7B82D /* XMLReader.m in Sources */,
 				A9DB90A519ECC6BA00127DF6 /* SAViewController.m in Sources */,
 				A9DB906C19ECC5BA00127DF6 /* main.m in Sources */,
 			);
@@ -525,6 +543,7 @@
 				A9DB909319ECC5BA00127DF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9DB909419ECC5BA00127DF6 /* Build configuration list for PBXNativeTarget "MyStudentInfoTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +552,7 @@
 				A9DB909619ECC5BA00127DF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

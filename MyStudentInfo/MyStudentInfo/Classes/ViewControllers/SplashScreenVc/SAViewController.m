@@ -17,13 +17,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.navigationController.navigationBarHidden=YES;
 	// Do any additional setup after loading the view, typically from a nib.
-    [self performSelector:@selector(gotoLoginScreen) withObject:nil afterDelay:2.0];
+    [self performSelector:@selector(gotoLoginScreen) withObject:nil afterDelay:1.0];
+    
 }
 
 -(void)gotoLoginScreen{
-    [self performSegueWithIdentifier:@"SALoginVC" sender:nil];
+    if ([[[[[NSUserDefaults standardUserDefaults] objectForKey:@"AutoLoaginWithName"] componentsSeparatedByString:@"_"] lastObject] boolValue]) {
+        [self performSegueWithIdentifier:@"HomeVc" sender:nil];
+    }else{
+       [self performSegueWithIdentifier:@"SALoginVC" sender:nil];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
