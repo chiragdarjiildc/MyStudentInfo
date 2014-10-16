@@ -27,5 +27,8 @@
 @property(nonatomic, retain) NSMutableData *webData;
 @property(nonatomic, retain) NSMutableString *soapResults;
 @property(nonatomic, retain) NSXMLParser *xmlParser;
+@property (weak, nonatomic) IBOutlet UIButton *btn_hint;
+@property (weak, nonatomic) IBOutlet UITextView *tv_hint;
+- (IBAction)btn_hint_touched:(id)sender;
 
 @end

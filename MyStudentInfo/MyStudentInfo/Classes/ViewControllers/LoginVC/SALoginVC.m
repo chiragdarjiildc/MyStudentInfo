@@ -53,18 +53,7 @@
 - (IBAction)btn_login_touched:(id)sender {
     recordResults = FALSE;
 	
-//	NSString *soapMessage = [NSString stringWithFormat:
-//                             @"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n"
-//                             "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n"
-//                             "<soap:Body>\n"
-//                             "<lgn xmlns=\"http://tempuri.org/\">\n"
-//                             "<u>%@</u>\n"
-//                             "<u>%@</u>\n"
-//                             "</lgn>\n"
-//                             "</soap:Body>\n"
-//                             "</soap:Envelope>", txt_username.text,txt_password.text
-//                             ];
-    
+
     NSString *soapMessage = [NSString stringWithFormat:
                              @"<?xml version=\"1.0\" encoding=\"utf-8\"?>"
                              "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">"
@@ -211,5 +200,12 @@
     }
         
         
+}
+- (IBAction)btn_hint_touched:(id)sender {
+    
+    if (_tv_hint.hidden)
+        _tv_hint.hidden = NO;
+    else
+        _tv_hint.hidden = YES;
 }
 @end

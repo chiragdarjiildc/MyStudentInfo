@@ -1,18 +1,18 @@
 //
-//  SAHomeVC.m
+//  SAAttendanceVC.m
 //  MyStudentInfo
 //
-//  Created by indianic on 15/10/14.
+//  Created by Macbook Air AES on 16/10/14.
 //  Copyright (c) 2014 SCS. All rights reserved.
 //
 
-#import "SAHomeVC.h"
+#import "SAAttendanceVC.h"
 
-@interface SAHomeVC ()
+@interface SAAttendanceVC ()
 
 @end
 
-@implementation SAHomeVC
+@implementation SAAttendanceVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,8 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-        self.navigationController.navigationBarHidden=NO;
-        self.navigationItem.hidesBackButton=YES;
 }
 
 - (void)didReceiveMemoryWarning
