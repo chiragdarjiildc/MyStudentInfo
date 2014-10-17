@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SAHomeVC : UIViewController
+@interface SAHomeVC : UIViewController<UIActionSheetDelegate>
+- (IBAction)btn_settings_touched:(id)sender;
 
 @end

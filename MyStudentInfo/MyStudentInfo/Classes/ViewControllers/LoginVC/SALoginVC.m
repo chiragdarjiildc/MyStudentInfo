@@ -8,6 +8,7 @@
 
 #import "SALoginVC.h"
 #import "XMLReader.h"
+#import "SAHomeVC.h"
 
 @interface SALoginVC ()
 
@@ -30,7 +31,20 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden=NO;
     self.navigationItem.hidesBackButton=YES;
+    NSLog(@"%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"AutoLoaginWithName"]);
+    if ([[[[[NSUserDefaults standardUserDefaults] objectForKey:@"AutoLoaginWithName"] componentsSeparatedByString:@"_"] lastObject] boolValue]) {
+//        [self performSegueWithIdentifier:@"SAHomeVC" sender:nil];
+        [self performSelector:@selector(gotoHome) withObject:nil afterDelay:1.0];
+    }
+    
+    
+    
     // Do any additional setup after loading the view.
+}
+
+-(void)gotoHome{
+    SAHomeVC *objSAHomeVC=[self.storyboard instantiateViewControllerWithIdentifier:@"SAHomeVC"];
+    [self.navigationController pushViewController:objSAHomeVC animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -148,7 +162,10 @@
         }
         
         [[NSUserDefaults standardUserDefaults] synchronize];
-        [self performSegueWithIdentifier:@"SAHomeVC" sender:nil];
+
+        SAHomeVC *objSAHomeVC=[self.storyboard instantiateViewControllerWithIdentifier:@"SAHomeVC"];
+        [self.navigationController pushViewController:objSAHomeVC animated:YES];
+        //        [self performSegueWithIdentifier:@"SAHomeVC" sender:nil];
     }
 }
 

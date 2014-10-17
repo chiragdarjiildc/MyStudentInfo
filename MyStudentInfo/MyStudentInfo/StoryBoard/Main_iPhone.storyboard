@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nay-rx-0GM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nay-rx-0GM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -40,16 +40,17 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="m8c-KK-YWe" kind="push" identifier="SALoginVC" id="Gyq-8M-bLc"/>
+                        <segue destination="Kb4-vn-yqk" kind="push" identifier="SADirectHomeVC" id="swV-qW-4hW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-802" y="-726"/>
+            <point key="canvasLocation" x="-2010" y="-54"/>
         </scene>
         <!--HomeVC - School of Computer Studies-->
         <scene sceneID="Ckt-4e-7gh">
             <objects>
-                <viewController id="Kb4-vn-yqk" customClass="SAHomeVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SAHomeVC" id="Kb4-vn-yqk" customClass="SAHomeVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nvV-TZ-b0j"/>
                         <viewControllerLayoutGuide type="bottom" id="tzH-Bs-HWt"/>
@@ -94,6 +95,9 @@
                                 <state key="normal" title="Button" image="Settings.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btn_settings_touched:" destination="Kb4-vn-yqk" eventType="touchUpInside" id="Unv-7m-Vsc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LY1-9x-WTW">
                                 <rect key="frame" x="110" y="242" width="100" height="100"/>
@@ -122,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLC-09-GFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1225" y="-62"/>
+            <point key="canvasLocation" x="-1165" y="-34"/>
         </scene>
         <!--ResultVC - Result-->
         <scene sceneID="u6C-X2-e0D">
@@ -141,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1OB-Oy-eTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-838" y="-62"/>
+            <point key="canvasLocation" x="-238" y="1010"/>
         </scene>
         <!--AttendanceVC - Attendance-->
         <scene sceneID="qaG-ix-qvw">
@@ -160,12 +164,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHT-m6-qkO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="324" y="173"/>
+            <point key="canvasLocation" x="-238" y="361"/>
         </scene>
         <!--InfoVC - Info-->
         <scene sceneID="cKK-8a-52Y">
             <objects>
-                <viewController id="8TI-hU-jqR" customClass="SAInfoVC" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8TI-hU-jqR" customClass="SAInfoVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rJ8-bD-Zni"/>
                         <viewControllerLayoutGuide type="bottom" id="P08-fS-T6D"/>
@@ -190,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rq4-Ix-i1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="366" y="-521"/>
+            <point key="canvasLocation" x="-238" y="-941"/>
         </scene>
         <!--LibraryVC - Library-->
         <scene sceneID="k4n-IN-5dI">
@@ -209,12 +213,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="At5-7u-wsf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="739" y="-351"/>
+            <point key="canvasLocation" x="-238" y="-291"/>
         </scene>
         <!--Ahd UniVC - Ahmedabad University-->
         <scene sceneID="fZO-vF-UrL">
             <objects>
-                <viewController id="Qoe-sn-eMF" customClass="SAAhdUniVC" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Qoe-sn-eMF" customClass="SAAhdUniVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pg0-Fq-uQd"/>
                         <viewControllerLayoutGuide type="bottom" id="gAw-4h-IMe"/>
@@ -240,9 +244,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gVI-fy-LAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3" y="-707"/>
+            <point key="canvasLocation" x="-231" y="-1603"/>
         </scene>
-        <!--LoginVC - School of Computer Studies-->
+        <!--LoginVC - Login-->
         <scene sceneID="fmh-jQ-krU">
             <objects>
                 <viewController storyboardIdentifier="SALoginVC" id="m8c-KK-YWe" customClass="SALoginVC" sceneMemberID="viewController">
@@ -277,11 +281,11 @@
                                     <action selector="btn_login_touched:" destination="m8c-KK-YWe" eventType="touchUpInside" id="LIO-Wt-gBZ"/>
                                 </connections>
                             </button>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Username: Printed on I-Card.  Password: Consists of 3 characters of your Fisrt Name followed by DDMM of your DOB. (ABC3112) " translatesAutoresizingMaskIntoConstraints="NO" id="Iky-BJ-ane">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Username: Printed on I-Card.  Password: Consists of 3 characters of your Fisrt Name followed by DDMM of your DOB. (ABC3112) " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iky-BJ-ane">
                                 <rect key="frame" x="12" y="314" width="301" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpe-sL-9To">
@@ -300,15 +304,16 @@
                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3N-Ur-J1E">
                                 <rect key="frame" x="102" y="173" width="19" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="S" image="check.png">
+                                <state key="normal" title="S" image="uncheck.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="check.png"/>
                                 <connections>
                                     <action selector="btn_save_password_touched:" destination="m8c-KK-YWe" eventType="touchUpInside" id="lIJ-kO-fcI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKy-Th-LoO">
-                                <rect key="frame" x="5" y="276" width="224" height="30"/>
+                                <rect key="frame" x="5" y="276" width="308" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Hint for username &amp; password">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -320,7 +325,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="School of Computer Studies" id="eZb-iH-918"/>
+                    <navigationItem key="navigationItem" title="Login" id="eZb-iH-918"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="btn_hint" destination="uKy-Th-LoO" id="yAf-8Y-1og"/>
@@ -330,12 +335,12 @@
                         <outlet property="tv_hint" destination="Iky-BJ-ane" id="ShL-ti-TFg"/>
                         <outlet property="txt_password" destination="fmo-5c-FL7" id="jaw-5o-Pgc"/>
                         <outlet property="txt_username" destination="mxo-ic-F0e" id="rzy-Pi-Mle"/>
-                        <segue destination="Kb4-vn-yqk" kind="push" identifier="SAHomeVC" id="CbG-8v-TSv"/>
+                        <segue destination="Kb4-vn-yqk" kind="push" identifier="SAHomeVC" id="KYK-SI-DcS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKN-Ad-asv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-390" y="-726"/>
+            <point key="canvasLocation" x="-1590" y="-54"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9ib-hi-d6D">
@@ -353,7 +358,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGG-mH-qlm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1225" y="-726"/>
+            <point key="canvasLocation" x="-2461" y="-42"/>
         </scene>
     </scenes>
     <resources>
@@ -366,10 +371,14 @@
         <image name="library.png" width="107" height="166"/>
         <image name="loginButton.png" width="600" height="173"/>
         <image name="result.jpg" width="233" height="216"/>
+        <image name="uncheck.png" width="225" height="224"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="KYK-SI-DcS"/>
+    </inferredMetricsTieBreakers>
 </document>

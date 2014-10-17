@@ -7,6 +7,7 @@
 //
 
 #import "SAAttendanceVC.h"
+#import "XMLReader.h"
 
 @interface SAAttendanceVC ()
 

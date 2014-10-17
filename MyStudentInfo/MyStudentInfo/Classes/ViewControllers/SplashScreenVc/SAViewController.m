@@ -7,6 +7,7 @@
 //
 
 #import "SAViewController.h"
+#import "SALoginVC.h"
 
 @interface SAViewController ()
 
@@ -23,12 +24,25 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"Logout"]) {
+//        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"Logout"];
+//        [[NSUserDefaults standardUserDefaults]synchronize];
+//        [self performSelector:@selector(gotoLoginScreen) withObject:nil afterDelay:0.5];
+//        SALoginVC *objSALoginVC=[self.storyboard instantiateViewControllerWithIdentifier:@"SALoginVC"];
+//        [self.navigationController pushViewController:objSALoginVC animated:NO];
+//    }
+}
+
 -(void)gotoLoginScreen{
-    if ([[[[[NSUserDefaults standardUserDefaults] objectForKey:@"AutoLoaginWithName"] componentsSeparatedByString:@"_"] lastObject] boolValue]) {
-        [self performSegueWithIdentifier:@"HomeVc" sender:nil];
-    }else{
+//    if ([[[[[NSUserDefaults standardUserDefaults] objectForKey:@"AutoLoaginWithName"] componentsSeparatedByString:@"_"] lastObject] boolValue]) {
+//        [self performSegueWithIdentifier:@"SADirectHomeVC" sender:nil];
+//    }else{
+    
        [self performSegueWithIdentifier:@"SALoginVC" sender:nil];
-    }
+        
+//    }
     
 }
 

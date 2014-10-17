@@ -48,4 +48,38 @@
 }
 */
 
+- (IBAction)btn_settings_touched:(id)sender {
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Settings"
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Logout"
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:nil];
+    
+    // Programatically add Other button titles if they exist.
+    
+    //[actionSheet addButtonWithTitle:@"Static button"];
+    
+    actionSheet.cancelButtonIndex = [actionSheet addButtonWithTitle:@"Cancel"];
+    
+    [actionSheet showInView:self.view.window];
+    
+   
+
+    
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+       switch (buttonIndex) {
+        case 0: // Dosomething
+               [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"UserName"];
+               [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"AutoLoaginWithName"];
+               [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"Logout"];
+               [[NSUserDefaults standardUserDefaults] synchronize];
+               [self.navigationController popToViewController:[[self.navigationController viewControllers] objectAtIndex:1] animated:YES];
+            break;
+    default:
+            break;
+    }
+}
 @end
