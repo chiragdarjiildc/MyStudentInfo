@@ -17,6 +17,7 @@
 @implementation SALoginVC
 @synthesize txt_username,txt_password, webData, soapResults, xmlParser;
 
+#pragma  mark - View Controller's events
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -42,11 +43,6 @@
     // Do any additional setup after loading the view.
 }
 
--(void)gotoHome{
-    SAHomeVC *objSAHomeVC=[self.storyboard instantiateViewControllerWithIdentifier:@"SAHomeVC"];
-    [self.navigationController pushViewController:objSAHomeVC animated:NO];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -64,6 +60,7 @@
 }
 */
 
+#pragma mark - XML Parser events
 - (IBAction)btn_login_touched:(id)sender {
     recordResults = FALSE;
 	
@@ -202,7 +199,7 @@
 	}
 }
 
-
+#pragma mark - Button Touched events
 
 - (IBAction)btn_save_password_touched:(id)sender {
     if (_btn_save_password.selected)
@@ -225,4 +222,10 @@
     else
         _tv_hint.hidden = YES;
 }
+
+-(void)gotoHome{
+    SAHomeVC *objSAHomeVC=[self.storyboard instantiateViewControllerWithIdentifier:@"SAHomeVC"];
+    [self.navigationController pushViewController:objSAHomeVC animated:NO];
+}
+
 @end

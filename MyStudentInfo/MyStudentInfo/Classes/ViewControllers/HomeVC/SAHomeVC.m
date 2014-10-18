@@ -14,6 +14,7 @@
 
 @implementation SAHomeVC
 
+#pragma mark - View Controller's events
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -47,6 +48,8 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - Button Setting & Action Sheet
 
 - (IBAction)btn_settings_touched:(id)sender {
     

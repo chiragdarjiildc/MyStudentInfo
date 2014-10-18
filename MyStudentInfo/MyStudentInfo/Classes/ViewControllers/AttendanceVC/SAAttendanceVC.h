@@ -9,5 +9,17 @@
 #import <UIKit/UIKit.h>
 
 @interface SAAttendanceVC : UIViewController
+{
+    NSMutableData *webData;
+	NSMutableString *soapResults;
+	NSXMLParser *xmlParser;
+	BOOL *recordResults;
+    
+}
+
+@property(nonatomic, retain) NSMutableData *webData;
+@property(nonatomic, retain) NSMutableString *soapResults;
+@property(nonatomic, retain) NSXMLParser *xmlParser;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_Attendance_Text;
 
 @end
