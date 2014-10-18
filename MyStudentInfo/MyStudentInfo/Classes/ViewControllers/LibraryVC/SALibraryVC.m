@@ -13,6 +13,8 @@
 
 @end
 
+NSMutableArray *arrDate ;
+NSMutableArray *arrBook ;
 @implementation SALibraryVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -36,8 +38,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     recordResults = FALSE;
-	 arLibraryResult = [NSMutableArray arrayWithObjects:@"A",nil];
+	 arLibraryResult = [NSMutableArray arrayWithObjects:nil];
     
+    arrDate = [NSMutableArray  arrayWithObjects:nil];
+    arrBook = [NSMutableArray  arrayWithObjects:nil];
     
     NSLog( @"%lu" ,(unsigned long)[arLibraryResult count]);
     
@@ -129,24 +133,26 @@
     //  NSLog(@"Dictionary = %@",dictResponce);
     NSMutableArray *tmparr = [NSMutableArray arrayWithObjects:[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"libraryResponse"] objectForKey:@"libraryResult"] objectForKey:@"string"], nil];
     
-    // [arLibraryResult  addObjectsFromArray:[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"libraryResponse"] objectForKey:@"libraryResult"] objectForKey:@"string"]];
+     [arLibraryResult  addObjectsFromArray:[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"libraryResponse"] objectForKey:@"libraryResult"] objectForKey:@"string"]];
     
-    //NSLog(@"%@", [[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"libraryResponse"] objectForKey:@"libraryResult"] objectForKey:@"string"] objectAtIndex:0]);
-   
-    NSMutableArray *arrDate = [NSMutableArray  arrayWithObjects:nil];
-    NSMutableArray *arrBook = [NSMutableArray  arrayWithObjects:nil];
-   
-    for (int i =0; i< arLibraryResult.count; i++)
+ //   NSLog(@"%@",[[arLibraryResult objectAtIndex:0] objectForKey:@"text"]);
+   // NSLog(@"%@", [[[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"libraryResponse"] objectForKey:@"libraryResult"] objectForKey:@"string"] objectAtIndex:0] objectForKey:@"text" ]);
+    
+    int cnt = [[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"libraryResponse"] objectForKey:@"libraryResult"] objectForKey:@"string"] count];
+    for (int i =0; i< cnt; i++)
     {
         if ((i%2)==0 )
         {
-          
+
+             [arrBook addObject:[[[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"libraryResponse"] objectForKey:@"libraryResult"] objectForKey:@"string"] objectAtIndex:i]objectForKey:@"text" ]];
         }
         else
         {
-            
+            [arrDate  addObject:[[[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"libraryResponse"] objectForKey:@"libraryResult"] objectForKey:@"string"] objectAtIndex:i] objectForKey:@"text" ]];
+
+            //[arrBook addObjectsFromArray:[[arLibraryResult objectAtIndex:i] objectForKey:@"text"]];
         }
-        NSLog(@"%@",[[arLibraryResult objectAtIndex:i] objectForKey:@"text"]);
+      //  NSLog(@"%@",[[arLibraryResult objectAtIndex:i] objectForKey:@"text"]);
 
     }
     [self.tbl reloadData];
@@ -157,7 +163,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return [arLibraryResult count];
+    return [arrDate count];
 }
 
 // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
@@ -170,16 +176,16 @@
     {
         cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    NSLog(@"%@",indexPath);
-    NSLog(@"%@",arLibraryResult);
+  //  NSLog(@"%@",indexPath);
+  //  NSLog(@"%@",arLibraryResult);
     
    // UIImageView *IMGVIEW = [cell.contentView viewWithTag:1001];
   //  IMGVIEW.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",indexPath.row]];
     UILabel *lbl_date = [cell.contentView viewWithTag:1001];
     UILabel *lbl_book =    [cell.contentView viewWithTag:1002];
     
-    lbl_date.text =[NSString stringWithFormat:@"%@",[arLibraryResult objectAtIndex:indexPath.row] ]   ;
-    lbl_book.text =@"Book";
+    lbl_date.text = [NSString stringWithFormat:@"%@",[arrDate objectAtIndex:indexPath.row] ]   ;
+    lbl_book.text =[NSString stringWithFormat:@"%@",[arrBook objectAtIndex:indexPath.row] ]   ;
     
    // cell.textLabel.text =  [arLibraryResult objectAtIndex:indexPath.row];
   //  cell.textLabel.text = [NSString stringWithFormat:@"%ld-%@",(long)indexPath.row,[arLibraryResult objectAtIndex:indexPath.row] ]   ;
