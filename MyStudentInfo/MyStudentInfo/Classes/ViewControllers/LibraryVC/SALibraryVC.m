@@ -139,6 +139,8 @@ NSMutableArray *arrBook ;
    // NSLog(@"%@", [[[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"libraryResponse"] objectForKey:@"libraryResult"] objectForKey:@"string"] objectAtIndex:0] objectForKey:@"text" ]);
     
     int cnt = [[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"libraryResponse"] objectForKey:@"libraryResult"] objectForKey:@"string"] count];
+    if (cnt > 1)
+    {
     for (int i =0; i< cnt; i++)
     {
         if ((i%2)==0 )
@@ -154,6 +156,7 @@ NSMutableArray *arrBook ;
         }
       //  NSLog(@"%@",[[arLibraryResult objectAtIndex:i] objectForKey:@"text"]);
 
+    }
     }
     [self.tbl reloadData];
 
@@ -186,7 +189,7 @@ NSMutableArray *arrBook ;
     
     lbl_date.text = [NSString stringWithFormat:@"%@",[arrDate objectAtIndex:indexPath.row] ]   ;
     lbl_book.text =[NSString stringWithFormat:@"%@",[arrBook objectAtIndex:indexPath.row] ]   ;
-    
+  
    // cell.textLabel.text =  [arLibraryResult objectAtIndex:indexPath.row];
   //  cell.textLabel.text = [NSString stringWithFormat:@"%ld-%@",(long)indexPath.row,[arLibraryResult objectAtIndex:indexPath.row] ]   ;
 
