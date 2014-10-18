@@ -169,7 +169,7 @@ NSMutableArray *arrResultFinal ;
         cell=[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     //  NSLog(@"%@",indexPath);
-    //  NSLog(@"%@",arLibraryResult);
+    //  NSLog(@"%@",arLibraryResult);    
     
     // UIImageView *IMGVIEW = [cell.contentView viewWithTag:1001];
     //  IMGVIEW.image = [UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg",indexPath.row]];
