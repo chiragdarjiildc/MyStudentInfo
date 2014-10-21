@@ -9,7 +9,18 @@
 #import "SAAttendanceVC.h"
 #import "XMLReader.h"
 
+#define RGBA(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+static const CGFloat dia = 230.0f;
+static const CGRect kPieChartViewFrame = {{45.0f, 150.0f},{dia, dia}};
 @interface SAAttendanceVC ()
+<
+PieChartViewDelegate,
+PieChartViewDataSource
+>
+{
+    UILabel *holeLabel;
+    UILabel *valueLabel;
+}
 
 @end
 
@@ -121,6 +132,58 @@
       //  NSLog(@"Dictionary = %@",dictResponce);
       //  NSLog(@"%@", [[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"AttResponse"] objectForKey:@"AttResult"] objectForKey:@"string"] objectForKey:@"text"]);
 	_lbl_Attendance_Text.text =[[[[[[dictResponce objectForKey:@"soap:Envelope"] objectForKey:@"soap:Body"] objectForKey:@"AttResponse"] objectForKey:@"AttResult"] objectForKey:@"string"] objectForKey:@"text"];
+    attendanceVal = [[[[[_lbl_Attendance_Text.text componentsSeparatedByString:@":"] lastObject] stringByReplacingOccurrencesOfString:@"%" withString:@""] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] integerValue];
+    [self loadPieChart];
+}
+
+-(void)loadPieChart
+{
+    pieChartView = [[PieChartView alloc] initWithFrame:kPieChartViewFrame];
+    pieChartView.delegate = self;
+    pieChartView.datasource = self;
+    [self.view addSubview:pieChartView];
+    
+    UIView *vwSeperatorOnPie = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 3, 61)];
+    [vwSeperatorOnPie setBackgroundColor:RGBA(50, 50, 50, 1)];
+    [self.view addSubview:vwSeperatorOnPie];
+    
+    UILabel *lblPercentage = [[UILabel alloc] initWithFrame:CGRectMake(122, 240, 75, 50)];
+    lblPercentage.text=[NSString stringWithFormat:@"%ld%%",(long)attendanceVal];
+    lblPercentage.textColor=RGBA(0, 115, 0, 1.0);
+    lblPercentage.font = [UIFont systemFontOfSize:30];
+    lblPercentage.textAlignment = NSTextAlignmentCenter;
+//    lblPercentage.backgroundColor =[UIColor blueColor];
+    [self.view addSubview:lblPercentage];
+    
+    [pieChartView reloadData];
+    
+}
+
+-(CGFloat)centerCircleRadius
+{
+    return 56.5;
+}
+
+-(int)numberOfSlicesInPieChartView:(PieChartView *)pieChartView
+{
+    return 2;
+}
+
+-(UIColor *)pieChartView:(PieChartView *)pieChartView colorForSliceAtIndex:(NSUInteger)index
+{
+    if (index==0)
+        return RGBA(0, 115, 0, 1.0);
+    else
+        return [UIColor redColor];
+}
+
+-(double)pieChartView:(PieChartView *)pieChartView valueForSliceAtIndex:(NSUInteger)index
+{
+    
+    if (index==0)
+        return attendanceVal;
+    else
+        return (100-attendanceVal);
 }
 
 

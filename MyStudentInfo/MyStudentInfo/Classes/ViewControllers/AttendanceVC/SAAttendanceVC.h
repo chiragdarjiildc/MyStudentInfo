@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PieChartView.h"
 
 @interface SAAttendanceVC : UIViewController
 {
@@ -14,6 +15,8 @@
 	NSMutableString *soapResults;
 	NSXMLParser *xmlParser;
 	BOOL *recordResults;
+    PieChartView *pieChartView;
+    NSInteger attendanceVal;
     
 }
 

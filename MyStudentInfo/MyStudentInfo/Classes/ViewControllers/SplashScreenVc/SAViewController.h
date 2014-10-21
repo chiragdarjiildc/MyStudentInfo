@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SAViewController : UIViewController
+@interface SAViewController : UIViewController{
+    IBOutlet UIImageView *imgBack;
+}
 
 @end
